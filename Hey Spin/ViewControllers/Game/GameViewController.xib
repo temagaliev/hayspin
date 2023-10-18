@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameViewController" customModule="Hey_Spin" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonStack" destination="ZVu-Y7-E4n" id="FSS-Kg-s16"/>
+                <outlet property="frutFiveButton" destination="8eT-lH-4vO" id="bhT-20-VbI"/>
+                <outlet property="frutFourButton" destination="ca6-Mz-a65" id="n7b-VT-9PW"/>
+                <outlet property="frutOneButton" destination="LGr-pp-pZh" id="Zcf-Jh-fMq"/>
+                <outlet property="frutSixButton" destination="i1p-il-ugn" id="cWg-SJ-jgE"/>
+                <outlet property="frutThreeButton" destination="EdW-np-hTu" id="WAo-H2-mlv"/>
+                <outlet property="frutTwoButton" destination="23E-wC-0M3" id="lvm-OF-fQE"/>
+                <outlet property="gameStackView" destination="zDT-ug-Inw" id="qn4-YP-iOO"/>
+                <outlet property="timeImage" destination="CQH-83-xDT" id="HGg-B1-rKs"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameBg" translatesAutoresizingMaskIntoConstraints="NO" id="Nx7-9E-tat">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9i-J3-mpH">
+                    <rect key="frame" x="16" y="58" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Urs-Hn-gTG"/>
+                        <constraint firstAttribute="width" constant="50" id="dVO-aF-ilx"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="closeButton"/>
+                    <connections>
+                        <action selector="onCloseButtonClick:" destination="-1" eventType="touchUpInside" id="JD0-Bs-phF"/>
+                    </connections>
+                </button>
+                <stackView opaque="NO" contentMode="left" ambiguous="YES" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zDT-ug-Inw">
+                    <rect key="frame" x="8" y="381" width="359" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Bvh-80-gw9"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZVu-Y7-E4n">
+                    <rect key="frame" x="35.666666666666657" y="670" width="304" height="100"/>
+                    <subviews>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGr-pp-pZh">
+                            <rect key="frame" x="0.0" y="28" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="WAi-hc-HHQ"/>
+                                <constraint firstAttribute="width" secondItem="LGr-pp-pZh" secondAttribute="height" multiplier="1:1" id="eHH-QP-KD3"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="frutOne"/>
+                            <connections>
+                                <action selector="onFructButtonClick:" destination="-1" eventType="touchUpInside" id="Ru1-ct-M7B"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23E-wC-0M3">
+                            <rect key="frame" x="52" y="28" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="23E-wC-0M3" secondAttribute="height" multiplier="1:1" id="8VH-5j-ApH"/>
+                                <constraint firstAttribute="width" constant="44" id="Hw4-b2-cg9"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="frunTwo"/>
+                            <connections>
+                                <action selector="onFructButtonClick:" destination="-1" eventType="touchUpInside" id="4kG-4L-glr"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EdW-np-hTu">
+                            <rect key="frame" x="104" y="28" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="EdW-np-hTu" secondAttribute="height" multiplier="1:1" id="BnM-2q-O0i"/>
+                                <constraint firstAttribute="width" constant="44" id="L91-KQ-dUW"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="frutThree"/>
+                            <connections>
+                                <action selector="onFructButtonClick:" destination="-1" eventType="touchUpInside" id="d6a-wP-cbO"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ca6-Mz-a65">
+                            <rect key="frame" x="156" y="28" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="Jtx-jP-SAx"/>
+                                <constraint firstAttribute="width" secondItem="ca6-Mz-a65" secondAttribute="height" multiplier="1:1" id="b9u-fE-54v"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="frutFour"/>
+                            <connections>
+                                <action selector="onFructButtonClick:" destination="-1" eventType="touchUpInside" id="QkC-0J-x1N"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8eT-lH-4vO">
+                            <rect key="frame" x="208" y="28" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="ZIo-nh-sEd"/>
+                                <constraint firstAttribute="width" secondItem="8eT-lH-4vO" secondAttribute="height" multiplier="1:1" id="q9W-eq-Kfu"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="frutFive"/>
+                            <connections>
+                                <action selector="onFructButtonClick:" destination="-1" eventType="touchUpInside" id="kfR-VH-0IN"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1p-il-ugn">
+                            <rect key="frame" x="260" y="28" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="U95-Lg-vWy"/>
+                                <constraint firstAttribute="width" secondItem="i1p-il-ugn" secondAttribute="height" multiplier="1:1" id="za8-ou-xbz"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="frutSix"/>
+                            <connections>
+                                <action selector="onFructButtonClick:" destination="-1" eventType="touchUpInside" id="bxl-5H-jCU"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="I2s-Qx-jKU"/>
+                    </constraints>
+                </stackView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="numberThree" translatesAutoresizingMaskIntoConstraints="NO" id="CQH-83-xDT">
+                    <rect key="frame" x="152.66666666666666" y="115" width="70" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="1Ka-Js-fhP"/>
+                        <constraint firstAttribute="height" constant="50" id="VLx-Y7-rew"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Nx7-9E-tat" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1Gy-Ep-Bz5"/>
+                <constraint firstItem="ZVu-Y7-E4n" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="80p-Ev-r3m"/>
+                <constraint firstItem="Nx7-9E-tat" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Dk4-nF-VJg"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zDT-ug-Inw" secondAttribute="trailing" priority="999" constant="8" id="GLS-kq-8R3"/>
+                <constraint firstItem="Nx7-9E-tat" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="JGI-3T-F9z"/>
+                <constraint firstItem="G9i-J3-mpH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="NOv-2a-lI3"/>
+                <constraint firstItem="G9i-J3-mpH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="XPB-aF-8n0"/>
+                <constraint firstItem="zDT-ug-Inw" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ZVU-uy-dUe"/>
+                <constraint firstItem="ZVu-Y7-E4n" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="daq-gQ-GUW"/>
+                <constraint firstAttribute="bottom" secondItem="Nx7-9E-tat" secondAttribute="bottom" id="eCD-oI-ihQ"/>
+                <constraint firstItem="CQH-83-xDT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="65" id="kFh-a8-8aK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZVu-Y7-E4n" secondAttribute="trailing" constant="8" id="lIS-4c-R7z"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ZVu-Y7-E4n" secondAttribute="bottom" constant="8" id="mOy-Hq-h8E"/>
+                <constraint firstItem="zDT-ug-Inw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="xxf-b0-Px5"/>
+                <constraint firstItem="CQH-83-xDT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yCp-bO-v1I"/>
+            </constraints>
+            <point key="canvasLocation" x="135" y="20.070422535211268"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="closeButton" width="353" height="353"/>
+        <image name="frunTwo" width="412" height="254"/>
+        <image name="frutFive" width="285" height="380"/>
+        <image name="frutFour" width="317" height="404"/>
+        <image name="frutOne" width="317" height="404"/>
+        <image name="frutSix" width="285" height="381"/>
+        <image name="frutThree" width="349" height="402"/>
+        <image name="gameBg" width="2484" height="4416"/>
+        <image name="numberThree" width="241" height="242"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
